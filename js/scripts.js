@@ -13,14 +13,14 @@ function toggleDarkMode() {
 
 $(document).ready(function() {
     $("#search_open").click(function() {
-        $("#pageheadline").hide();
+        $("#hmlogotop").hide();
         $("#mobilemenu_opener").hide();
         $("#search_close").show();
         $("#searchfield").show();
         $("#searchfield").focus();
     });
     $("#search_close").click(function() {
-        $("#pageheadline").show();
+        $("#hmlogotop").show();
         $("#mobilemenu_opener").show();
         $("#search_close").hide();
         $("#searchfield").hide();
@@ -28,13 +28,32 @@ $(document).ready(function() {
 
     $(".chapterLinks").on("click", function() {
       $("#cart-drawer").removeClass("translate-x-full");
-      $("#overlay").removeClass("hidden");
+      $("#cart-overlay").removeClass("hidden");
       return false;
     });
 
-    $("#overlay, #closeDrawer").on("click", function() {
+    $("#cart-overlay, #closeDrawer-cart").on("click", function() {
       $("#cart-drawer").addClass("translate-x-full");
-      $("#overlay").addClass("hidden");
+      $("#cart-overlay").addClass("hidden");
       return false;
+    });
+
+    $(".open_transliteration").on("click", function() {
+      $("#transliteration-drawer").removeClass("-translate-x-full");
+      $("#transliteration-overlay").removeClass("hidden");
+      return false;
+    });
+
+    $("#transliteration-overlay, #closeDrawer-transliteration").on("click", function() {
+      $("#transliteration-drawer").addClass("-translate-x-full");
+      $("#transliteration-overlay").addClass("hidden");
+      return false;
+    });
+
+    $(".copyToClipboardBtns button").click(function() {
+      $(this).find("span:first-child").hide();
+      $(this).find(".hidden").show();
+      $("#toast-simple > .toast-content").text("Link kopiert.");
+      $("#toast-simple").fadeIn(500);
     });
 });
