@@ -56,6 +56,9 @@
         li[data-dua-item-type='hinweis'] { 
             @apply text-hm_primary;
         }
+        svg.duaicon {
+            @apply fill-hm_primary;
+        }
 	}
 	BODY.category1 {
         #catbildwrap, #inhaltcontainer {
@@ -68,13 +71,14 @@
         li[data-dua-item-type='quran_translation'],
         li[data-dua-item-type='hadith_translation'],
         li[data-dua-item-type='ar_translation'] { 
-            @apply bg-category1-light/60;
+            @apply bg-category1;
+            /* @apply bg-category1-light/60;
             @variant dark {
                 @apply bg-category1-dark/60;
-            }
+            } */
         }
         li[data-dua-item-type='hinweis'] { 
-            @apply text-category1-dark;
+            @apply text-[#05B3AF];
         }
         svg.duaicon {
             @apply fill-category1;
@@ -99,13 +103,14 @@
         li[data-dua-item-type='quran_translation'],
         li[data-dua-item-type='hadith_translation'],
         li[data-dua-item-type='ar_translation'] { 
-            @apply bg-category2-light/60;
+            @apply bg-category2;
+            /* @apply bg-category2-light/60;
             @variant dark {
                 @apply bg-category2-dark/60;
-            }
+            } */
         }
         li[data-dua-item-type='hinweis'] { 
-            @apply text-category2-dark;
+            @apply text-category2;
         }
         svg.duaicon {
             @apply fill-category2;
@@ -131,13 +136,14 @@
         li[data-dua-item-type='quran_translation'],
         li[data-dua-item-type='hadith_translation'],
         li[data-dua-item-type='ar_translation'] { 
-            @apply bg-category3-light/60;
+            @apply bg-category3;
+            /* @apply bg-category3-light/60;
             @variant dark {
                 @apply bg-category3-dark/60;
-            }
+            } */
         }
         li[data-dua-item-type='hinweis'] { 
-            @apply text-[#2b51c4];
+            @apply text-category3;
         }
         svg.duaicon {
             @apply fill-category3;
@@ -163,13 +169,14 @@
         li[data-dua-item-type='quran_translation'],
         li[data-dua-item-type='hadith_translation'],
         li[data-dua-item-type='ar_translation'] { 
-            @apply bg-category4-light/60;
+            @apply bg-category4;
+            /* @apply bg-category4-light/60;
             @variant dark {
                 @apply bg-category4-dark/60;
-            }
+            } */
         }
         li[data-dua-item-type='hinweis'] { 
-            @apply text-category4-dark;
+            @apply text-category4;
         }
         svg.duaicon {
             @apply fill-category4;
@@ -195,13 +202,14 @@
         li[data-dua-item-type='quran_translation'],
         li[data-dua-item-type='hadith_translation'],
         li[data-dua-item-type='ar_translation'] { 
-            @apply bg-category5-light;
+            @apply bg-category5;
+            /* @apply bg-category5-light;
             @variant dark {
                 @apply bg-category5-dark/60;
-            }
+            } */
         }
         li[data-dua-item-type='hinweis'] { 
-            @apply text-category5-dark;
+            @apply text-category5;
         }
         svg.duaicon {
             @apply fill-category5;
@@ -227,13 +235,14 @@
         li[data-dua-item-type='quran_translation'],
         li[data-dua-item-type='hadith_translation'],
         li[data-dua-item-type='ar_translation'] { 
-            @apply bg-category6-light/60;
+            @apply bg-category6;
+            /* @apply bg-category6-light/60;
             @variant dark {
                 @apply bg-category6-dark/60;
-            }
+            } */
         }
         li[data-dua-item-type='hinweis'] { 
-            @apply text-category6-dark;
+            @apply text-category6;
         }
         svg.duaicon {
             @apply fill-category6;
@@ -259,13 +268,14 @@
         li[data-dua-item-type='quran_translation'],
         li[data-dua-item-type='hadith_translation'],
         li[data-dua-item-type='ar_translation'] { 
-            @apply bg-category7-light/60;
+            @apply bg-category7;
+            /* @apply bg-category7-light/60;
             @variant dark {
                 @apply bg-category7-dark/60;
-            }
+            } */
         }
         li[data-dua-item-type='hinweis'] { 
-            @apply text-category7-dark;
+            @apply text-category7;
         }
         svg.duaicon {
             @apply fill-category7;
@@ -386,74 +396,9 @@
         }
         ul {
             @apply font-normal text-sm divide-transparent;
-
-            li {
-                ul {
-                    @apply list-disc px-5;
-                    li {
-                        @apply my-2;
-                    }
-                }
-            }
-
-            li[data-dua-item-type='dua_translation'] { 
-                @apply py-4 font-normal text-lg bg-category3-dark;
-            }
-            li[data-dua-item-type='dua'] { 
-                @apply py-5 font-serif text-3xl xl:text-3xl/10 2xl:text-4xl/12 text-right;
-            }
-            li[data-dua-item-type='dua_umschrift'] { 
-                @apply pt-3 font-normal italic;
-                @apply pb-6 mb-3 border-b-2 border-neutral-200;
-                @variant dark { @apply border-neutral-500; }
-            }
-            li[data-dua-item-type='quran_translation'] { 
-                @apply py-4 font-normal text-lg;
-            }
-            li[data-dua-item-type='quran'] { 
-                @apply py-5 font-serif text-4xl text-right;
-            }
-            li[data-dua-item-type='quran_umschrift'] { 
-                @apply pt-1 font-normal italic;
-                @apply pb-6 mb-3 border-b-2 border-neutral-200;
-                @variant dark { @apply border-neutral-500; }
-            }
-            li[data-dua-item-type='hadith_translation'] { 
-                @apply py-4 font-normal text-lg;
-            }
-            li[data-dua-item-type='hadith'] { 
-                @apply py-5 font-serif text-4xl text-right;
-            }
-            li[data-dua-item-type='hadith_umschrift'] { 
-                @apply pt-1 font-normal;
-                @apply pb-6 mb-3 border-b-2 border-neutral-200;
-                @variant dark { @apply border-neutral-500; }
-            }
-            li[data-dua-item-type='ar_translation'] { 
-                @apply py-4 font-normal text-lg;
-            }
-            li[data-dua-item-type='ar'] { 
-                @apply py-5 font-serif text-4xl text-right;
-            }
-            li[data-dua-item-type='ar_umschrift'] { 
-                @apply pt-1 font-normal italic;
-                @apply pb-6 mb-3 border-b-2 border-neutral-200;
-                @variant dark { @apply border-neutral-500; }
-            }
-            li[data-dua-item-type='hinweis'] { 
-                @apply py-4 text-sm font-medium;
-                p {
-                    @apply mb-2;
-                }
-                p:last-child {
-                    @apply mb-0;
-                }
-            }
-            li[data-dua-item-type='quelle'] { 
-                @apply py-4 font-normal text-sm;
-            }
+            
             li:last-child {
-                @apply border-b-0 pb-2 mb-0;
+                @apply pb-2 mb-0;
             }
         }
 	}
@@ -477,9 +422,8 @@
             }
 
             li {
-                @apply px-7 lg:px-10 py-5;
+                @apply px-7 lg:px-10 py-6;
                 ul {
-                    /* @apply text-sm flex; */
                     @apply list-disc text-sm px-5;
                     li {
                         @apply m-0 mr-2 my-2 p-0;
@@ -488,67 +432,55 @@
             }
 
             li[data-dua-item-type='dua_translation'] { 
-                @apply xl:pr-16 py-8 font-normal text-xl text-black;
-                @variant dark {
-                    @apply text-white;
-                }
+                @apply xl:pr-16 py-8 font-normal text-xl text-white;
             }
             li[data-dua-item-type='dua'] { 
                 @apply xl:pl-16 py-8 font-serif text-2xl text-right;
-                @apply mx-7 lg:mx-10 px-0 mb-2 border-b-1 border-neutral-200;
+                @apply mx-7 lg:mx-10 px-0 border-b-1 border-neutral-200;
+                @variant dark { @apply border-neutral-700; }
             }
             li[data-dua-item-type='dua_umschrift'] { 
                 @apply xl:pr-16 font-normal italic;
                 @apply border-b-3 border-neutral-300;
-                /* @apply inset-shadow; */
                 @variant dark { @apply border-neutral-500; }
             }
             li[data-dua-item-type='quran_translation'] { 
-                @apply xl:pr-16 py-8 font-normal text-xl text-black;
-                @variant dark {
-                    @apply text-white;
-                }
+                @apply xl:pr-16 py-8 font-normal text-xl text-white;
             }
             li[data-dua-item-type='quran'] { 
                 @apply xl:pl-16 py-8 font-serif text-2xl text-right;
                 @apply mx-7 lg:mx-10 px-0 mb-2 border-b-1 border-neutral-200;
+                @variant dark { @apply border-neutral-700; }
             }
             li[data-dua-item-type='quran_umschrift'] { 
                 @apply xl:pr-16 font-normal italic;
                 @apply border-b-3 border-neutral-300;
-                /* @apply inset-shadow; */
                 @variant dark { @apply border-neutral-500; }
             }
             li[data-dua-item-type='hadith_translation'] { 
-                @apply xl:pr-16 py-8 font-normal text-xl text-black;
-                @variant dark {
-                    @apply text-white;
-                }
+                @apply xl:pr-16 py-8 font-normal text-xl text-white;
             }
             li[data-dua-item-type='hadith'] { 
                 @apply xl:pl-16 py-8 font-serif text-2xl text-right;
                 @apply mx-7 lg:mx-10 px-0 mb-2 border-b-1 border-neutral-200;
+                @variant dark { @apply border-neutral-700; }
             }
             li[data-dua-item-type='hadith_umschrift'] { 
                 @apply xl:pr-16 font-normal italic;
                 @apply border-b-3 border-neutral-300;
-                /* @apply inset-shadow; */
                 @variant dark { @apply border-neutral-500; }
             }
             li[data-dua-item-type='ar_translation'] { 
-                @apply xl:pr-16 py-8 font-normal text-xl text-black;
-                @variant dark {
-                    @apply text-white;
-                }
+                @apply xl:pr-16 py-8 font-normal text-xl text-white;
             }
             li[data-dua-item-type='ar'] { 
                 @apply xl:pl-16 py-8 font-serif text-2xl text-right;
                 @apply mx-7 lg:mx-10 px-0 mb-2 border-b-1 border-neutral-200;
+                @variant dark { @apply border-neutral-700; }
             }
             li[data-dua-item-type='ar_umschrift'] { 
                 @apply xl:pr-16 font-normal italic;
                 @apply border-b-3 border-neutral-300;
-                /* @apply inset-shadow; */
                 @variant dark { @apply border-neutral-500; }
             }
             li[data-dua-item-type='hinweis'] { 
