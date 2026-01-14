@@ -1,0 +1,674 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-hm_primary: #3f66da;
+    --color-hm_secondary: #36054a;
+    --color-category1: #08BFBA;
+        --color-category1-dark: #004441;
+        --color-category1-light: #BEEAE4;
+    --color-category2: #2484D3;
+        --color-category2-dark: #052D49;
+        --color-category2-light: #BBDDEF;
+    --color-category3: #596ed3;
+        --color-category3-dark: #1D3060;
+        --color-category3-light: #C4CEE8;
+    --color-category4: #B41ED8;
+        --color-category4-dark: #430A51;
+        --color-category4-light: #E2B9EF;
+    --color-category5: #C51FB7;
+        --color-category5-dark: #440641;
+        --color-category5-light: #E7BAE8;
+    --color-category6: #DE2187;
+        --color-category6-dark: #4C0631;
+        --color-category6-light: #F4BDE3;
+    --color-category7: #EF2266;
+        --color-category7-dark: #60072B;
+        --color-category7-light: #F9C5DD;
+}
+
+@layer components {
+	BODY {
+        @apply bg-white dark:bg-black/95 h-[100dvh] flex flex-col; 
+
+        @variant dark {
+            @apply bg-black;
+        }
+	}
+    
+	BODY.category0 {
+        #searchcontainer {
+		    @apply bg-[url(https://www.hisnulmuslim.de/fileadmin/HisnulMuslim/Hintergruende/0_STARTSEITE.jpg)];
+        }
+        #searchcontainer > div {
+            @apply bg-neutral-500/60 xl:bg-transparent;
+        }
+        li[data-dua-item-type='dua_translation'],
+        li[data-dua-item-type='quran_translation'],
+        li[data-dua-item-type='hadith_translation'],
+        li[data-dua-item-type='ar_translation'] { 
+            @apply bg-hm_primary;
+        }
+        li[data-dua-item-type='hinweis'] { 
+            @apply text-hm_primary;
+        }
+        svg.duaicon {
+            @apply fill-hm_primary;
+        }
+	}
+	BODY.category1 {
+        #catbildwrap, #inhaltcontainer {
+		    @apply bg-[url(https://www.hisnulmuslim.de/fileadmin/HisnulMuslim/Hintergruende/1_ALLTAG-HD.jpg)];
+        }
+        #inhaltcontainer > div {
+            @apply bg-category1-light/40 xl:bg-transparent;
+        }
+        li[data-dua-item-type='dua_translation'],
+        li[data-dua-item-type='quran_translation'],
+        li[data-dua-item-type='hadith_translation'],
+        li[data-dua-item-type='ar_translation'] { 
+            @apply bg-category1;
+            /* @apply bg-category1-light/60;
+            @variant dark {
+                @apply bg-category1-dark/60;
+            } */
+        }
+        li[data-dua-item-type='hinweis'] { 
+            @apply text-[#05B3AF];
+        }
+        svg.duaicon {
+            @apply fill-category1;
+        }
+        .mainnav > a.active {
+            span:first-child {
+                @apply bg-category1 border-category1;
+                svg {
+                    @apply fill-white;
+                }
+            }
+        }
+	}
+	BODY.category2 {
+        #catbildwrap, #inhaltcontainer {
+		    @apply bg-[url(https://www.hisnulmuslim.de/fileadmin/HisnulMuslim/Hintergruende/02_Gebet-HD.jpg)];
+        }
+        #inhaltcontainer > div {
+            @apply bg-category2-light/40 xl:bg-transparent;
+        }
+        li[data-dua-item-type='dua_translation'],
+        li[data-dua-item-type='quran_translation'],
+        li[data-dua-item-type='hadith_translation'],
+        li[data-dua-item-type='ar_translation'] { 
+            @apply bg-category2;
+            /* @apply bg-category2-light/60;
+            @variant dark {
+                @apply bg-category2-dark/60;
+            } */
+        }
+        li[data-dua-item-type='hinweis'] { 
+            @apply text-category2;
+        }
+        svg.duaicon {
+            @apply fill-category2;
+        }
+        .mainnav > a.active {
+            span:first-child {
+                @apply bg-category2 border-category2;
+                svg {
+                    @apply fill-white;
+                }
+            }
+        }
+	}
+	BODY.category3 {
+        #catbildwrap, #inhaltcontainer {
+		    @apply bg-[url(https://www.hisnulmuslim.de/fileadmin/HisnulMuslim/Hintergruende/03_Reisen-HD.jpg)];
+        }
+        #inhaltcontainer > div {
+            @apply bg-category3-light/40 xl:bg-transparent;
+        }
+        
+        li[data-dua-item-type='dua_translation'],
+        li[data-dua-item-type='quran_translation'],
+        li[data-dua-item-type='hadith_translation'],
+        li[data-dua-item-type='ar_translation'] { 
+            @apply bg-category3;
+            /* @apply bg-category3-light/60;
+            @variant dark {
+                @apply bg-category3-dark/60;
+            } */
+        }
+        li[data-dua-item-type='hinweis'] { 
+            @apply text-category3;
+        }
+        svg.duaicon {
+            @apply fill-category3;
+        }
+        .mainnav > a.active {
+            span:first-child {
+                @apply bg-category3 border-category3;
+                svg {
+                    @apply fill-white;
+                }
+            }
+        }
+	}
+	BODY.category4 {
+        #catbildwrap, #inhaltcontainer {
+		    @apply bg-[url(https://www.hisnulmuslim.de/fileadmin/HisnulMuslim/Hintergruende/4_Schutz-HD.jpg)];
+        }
+        #inhaltcontainer > div {
+            @apply bg-category4-light/40 xl:bg-transparent;
+        }
+        
+        li[data-dua-item-type='dua_translation'],
+        li[data-dua-item-type='quran_translation'],
+        li[data-dua-item-type='hadith_translation'],
+        li[data-dua-item-type='ar_translation'] { 
+            @apply bg-category4;
+            /* @apply bg-category4-light/60;
+            @variant dark {
+                @apply bg-category4-dark/60;
+            } */
+        }
+        li[data-dua-item-type='hinweis'] { 
+            @apply text-category4;
+        }
+        svg.duaicon {
+            @apply fill-category4;
+        }
+        .mainnav > a.active {
+            span:first-child {
+                @apply bg-category4 border-category4;
+                svg {
+                    @apply fill-white;
+                }
+            }
+        }
+	}
+	BODY.category5 {
+        #catbildwrap, #inhaltcontainer {
+		    @apply bg-[url(https://www.hisnulmuslim.de/fileadmin/HisnulMuslim/Hintergruende/5_ErsteHilfe_HD.jpg)];
+        }
+        #inhaltcontainer > div {
+            @apply bg-category5-light/40 xl:bg-transparent;
+        }
+        
+        li[data-dua-item-type='dua_translation'],
+        li[data-dua-item-type='quran_translation'],
+        li[data-dua-item-type='hadith_translation'],
+        li[data-dua-item-type='ar_translation'] { 
+            @apply bg-category5;
+            /* @apply bg-category5-light;
+            @variant dark {
+                @apply bg-category5-dark/60;
+            } */
+        }
+        li[data-dua-item-type='hinweis'] { 
+            @apply text-category5;
+        }
+        svg.duaicon {
+            @apply fill-category5;
+        }
+        .mainnav > a.active {
+            span:first-child {
+                @apply bg-category5 border-category5;
+                svg {
+                    @apply fill-white;
+                }
+            }
+        }
+	}
+	BODY.category6 {
+        #catbildwrap, #inhaltcontainer {
+		    @apply bg-[url(https://www.hisnulmuslim.de/fileadmin/HisnulMuslim/Hintergruende/6_Befindlichkeit_HD.jpg)];
+        }
+        #inhaltcontainer > div {
+            @apply bg-category6-light/40 xl:bg-transparent;
+        }
+        
+        li[data-dua-item-type='dua_translation'],
+        li[data-dua-item-type='quran_translation'],
+        li[data-dua-item-type='hadith_translation'],
+        li[data-dua-item-type='ar_translation'] { 
+            @apply bg-category6;
+            /* @apply bg-category6-light/60;
+            @variant dark {
+                @apply bg-category6-dark/60;
+            } */
+        }
+        li[data-dua-item-type='hinweis'] { 
+            @apply text-category6;
+        }
+        svg.duaicon {
+            @apply fill-category6;
+        }
+        .mainnav > a.active {
+            span:first-child {
+                @apply bg-category6 border-category6;
+                svg {
+                    @apply fill-white;
+                }
+            }
+        }
+	}
+	BODY.category7 {
+        #catbildwrap, #inhaltcontainer {
+		    @apply bg-[url(https://www.hisnulmuslim.de/fileadmin/HisnulMuslim/Hintergruende/7_Pilgern_HD.jpg)];
+        }
+        #inhaltcontainer > div {
+            @apply bg-category7-light/40 xl:bg-transparent;
+        }
+        
+        li[data-dua-item-type='dua_translation'],
+        li[data-dua-item-type='quran_translation'],
+        li[data-dua-item-type='hadith_translation'],
+        li[data-dua-item-type='ar_translation'] { 
+            @apply bg-category7;
+            /* @apply bg-category7-light/60;
+            @variant dark {
+                @apply bg-category7-dark/60;
+            } */
+        }
+        li[data-dua-item-type='hinweis'] { 
+            @apply text-category7;
+        }
+        svg.duaicon {
+            @apply fill-category7;
+        }
+        .mainnav > a.active {
+            span:first-child {
+                @apply bg-category7 border-category7;
+                svg {
+                    @apply fill-white;
+                }
+            }
+        }
+	}
+
+    .bg-category-layer {
+        @apply absolute w-full h-screen z-30 bg-cover;
+    }
+
+    header {
+        @apply w-full px-6 py-5 shrink-0;
+    }
+
+    main {
+        @apply flex-1 overflow-auto h-full flex flex-col lg:flex-row lg:px-5;
+    }
+
+    footer {
+        @apply w-fit lg:ml-auto p-3 lg:p-5 z-40 text-xs shrink-0 mx-auto;
+    }
+
+    .toggleDarkMode {
+        @apply fixed z-60 bottom-2 right-2 lg:bottom-4 lg:right-5 cursor-pointer text-gray-600 rounded-full shadow-lg;
+        @variant dark {
+            @apply text-neutral-300;
+            @apply hover:text-neutral-100;
+        }
+        svg {
+            @apply size-5 lg:size-6;
+        }
+    }
+	article.tx-hisnulmuslim-app-subcat {
+		@apply bg-white;
+
+        @variant dark {
+            @apply bg-neutral-700;
+        }
+
+        li {
+            @variant dark {
+                @apply border-neutral-500;
+            }
+        }
+    }
+
+    .bittgebeteloading {
+		@apply w-full animate-pulse;
+        > div {
+            @apply w-full h-full flex flex-col items-start;
+            > div {
+                @apply w-full bg-gray-300;
+                @variant dark {
+                    @apply bg-neutral-700;
+                }
+            }
+        }
+    }
+
+    .mainnav {
+        a {
+            @apply flex flex-col w-full items-center;
+            span:first-child {
+                @apply bg-neutral-100/80 xl:bg-neutral-100/95 border border-neutral-200 p-2 rounded-lg;
+                @variant dark {
+                    @apply bg-black/60 xl:bg-neutral-800/70 border-neutral-800;
+                }
+                svg {
+                    @apply size-6 sm:size-8 fill-neutral-600 md:size-10 mx-auto;
+                    @variant dark {
+                        @apply fill-white;
+                    }
+                }
+            }
+            span:last-child {
+                @apply text-xs sm:text-sm mt-1;
+            }
+        }
+    }
+
+	.tx-hisnulmuslim-app-subcat {
+		@apply w-full shadow-md rounded-md h-fit relative border border-neutral-200 bg-neutral-100/80 xl:bg-neutral-100/95;
+		@apply mx-auto;
+        @variant dark {
+            @apply bg-black/60 xl:bg-neutral-800/70 border-neutral-800;
+        }
+        .nummerierung {
+            @apply hidden absolute right-2  w-14 py-1 text-center text-xs font-medium opacity-50;
+        }
+        ul {
+            @apply font-normal text-sm divide-transparent;
+            
+            li:last-child {
+                @apply pb-2 mb-0;
+            }
+        }
+	}
+
+    .tx-hisnulmuslim-app-dua {
+        @apply flex pb-5;
+
+        > svg {
+            @apply size-10 fill-hm_primary dark:fill-white;
+        }
+
+        .nummerierung {
+            @apply hidden absolute right-2  w-14 py-1 text-center text-xs font-medium opacity-50;
+        }
+        > div > ul,
+        > ul {
+            @apply w-full shadow-lg rounded-lg h-fit relative border border-hm_primary/20 bg-white;
+            @apply font-normal text-sm divide-transparent overflow-hidden;
+            @variant dark {
+                @apply bg-black/60 xl:bg-neutral-800/70 border-neutral-800;
+            }
+
+            li {
+                @apply px-7 lg:px-10 py-6;
+                ul {
+                    @apply list-disc text-sm px-5;
+                    li {
+                        @apply m-0 mr-2 my-2 p-0;
+                    }
+                }
+            }
+
+            li[data-dua-item-type='dua_translation'] { 
+                @apply xl:pr-16 py-8 font-normal text-xl text-white;
+            }
+            li[data-dua-item-type='dua'] { 
+                @apply xl:pl-16 py-8 font-serif text-2xl text-right;
+                @apply mx-7 lg:mx-10 px-0 border-b-1 border-neutral-200;
+                @variant dark { @apply border-neutral-700; }
+            }
+            li[data-dua-item-type='dua_umschrift'] { 
+                @apply xl:pr-16 font-normal italic;
+                @apply border-b-3 border-neutral-300;
+                @variant dark { @apply border-neutral-500; }
+            }
+            li[data-dua-item-type='quran_translation'] { 
+                @apply xl:pr-16 py-8 font-normal text-xl text-white;
+            }
+            li[data-dua-item-type='quran'] { 
+                @apply xl:pl-16 py-8 font-serif text-2xl text-right;
+                @apply mx-7 lg:mx-10 px-0 mb-2 border-b-1 border-neutral-200;
+                @variant dark { @apply border-neutral-700; }
+            }
+            li[data-dua-item-type='quran_umschrift'] { 
+                @apply xl:pr-16 font-normal italic;
+                @apply border-b-3 border-neutral-300;
+                @variant dark { @apply border-neutral-500; }
+            }
+            li[data-dua-item-type='hadith_translation'] { 
+                @apply xl:pr-16 py-8 font-normal text-xl text-white;
+            }
+            li[data-dua-item-type='hadith'] { 
+                @apply xl:pl-16 py-8 font-serif text-2xl text-right;
+                @apply mx-7 lg:mx-10 px-0 mb-2 border-b-1 border-neutral-200;
+                @variant dark { @apply border-neutral-700; }
+            }
+            li[data-dua-item-type='hadith_umschrift'] { 
+                @apply xl:pr-16 font-normal italic;
+                @apply border-b-3 border-neutral-300;
+                @variant dark { @apply border-neutral-500; }
+            }
+            li[data-dua-item-type='ar_translation'] { 
+                @apply xl:pr-16 py-8 font-normal text-xl text-white;
+            }
+            li[data-dua-item-type='ar'] { 
+                @apply xl:pl-16 py-8 font-serif text-2xl text-right;
+                @apply mx-7 lg:mx-10 px-0 mb-2 border-b-1 border-neutral-200;
+                @variant dark { @apply border-neutral-700; }
+            }
+            li[data-dua-item-type='ar_umschrift'] { 
+                @apply xl:pr-16 font-normal italic;
+                @apply border-b-3 border-neutral-300;
+                @variant dark { @apply border-neutral-500; }
+            }
+            li[data-dua-item-type='hinweis'] { 
+                @apply text-sm font-medium;
+                @variant dark { @apply text-white; }
+                p {
+                    @apply mb-2;
+                }
+                p:last-child {
+                    @apply mb-0;
+                }
+            }
+            li[data-dua-item-type='quelle'] { 
+                @apply font-normal text-sm;
+            }
+            li:last-child {
+                @apply border-b-0;
+            }
+        }
+    }
+
+	.tx-hisnulmuslim-app-subcat:last-child {
+        @apply mb-0;
+    }
+	.catnav > a {
+		@apply border-b-4 xl:border-r-4 xl:border-b-0 border-white;
+        @variant dark {
+            @apply border-black;
+        }
+	}
+    #catnav_1.catnav_active { @apply border-category1; }
+    #catnav_2.catnav_active { @apply border-category2; }
+    #catnav_3.catnav_active { @apply border-category3; }
+    #catnav_4.catnav_active { @apply border-category4; }
+    #catnav_5.catnav_active { @apply border-category5; }
+    #catnav_6.catnav_active { @apply border-category6; }
+    #catnav_7.catnav_active { @apply border-category7; }
+
+    h1 {
+        @apply text-xl;
+    }
+    .textcolor_category1 { @apply text-category1; }
+    .textcolor_category2 { @apply text-category2; }
+    .textcolor_category3 { @apply text-category3; }
+    .textcolor_category4 { @apply text-category4; }
+    .textcolor_category5 { @apply text-category5; }
+    .textcolor_category6 { @apply text-category6; }
+    .textcolor_category7 { @apply text-category7; }
+    
+    .textcolor_category1_dark { @apply text-category1-dark; }
+    .textcolor_category2_dark { @apply text-category2-dark; }
+    .textcolor_category3_dark { @apply text-category3-dark; }
+    .textcolor_category4_dark { @apply text-category4-dark; }
+    .textcolor_category5_dark { @apply text-category5-dark; }
+    .textcolor_category6_dark { @apply text-category6-dark; }
+    .textcolor_category7_dark { @apply text-category7-dark; }
+
+    .bg-primary {
+        @apply bg-white;
+
+        @variant dark {
+            @apply bg-black;
+        }
+    }
+
+    .text-primary {
+        @apply text-gray-800;
+
+        @variant dark {
+            @apply text-white;
+        }
+    }
+
+    .fill-primary {
+        @apply fill-gray-800;
+
+        @variant dark {
+            @apply fill-white;
+        }
+    }
+
+    .fill-cat1 {
+        @apply fill-category1;
+    }
+    .fill-cat2 {
+        @apply fill-category2;
+    }
+    .fill-cat3 {
+        @apply fill-category3;
+    }
+    .fill-cat4 {
+        @apply fill-category4;
+    }
+    .fill-cat5 {
+        @apply fill-category5;
+    }
+    .fill-cat6 {
+        @apply fill-category6;
+    }
+    .fill-cat7 {
+        @apply fill-category7;
+    }
+
+    .stroke-primary {
+        @apply stroke-gray-800;
+
+        @variant dark {
+            @apply stroke-white;
+        }
+    }
+
+    .stroke-secondary {
+        @apply stroke-neutral-700;
+
+        @variant dark {
+            @apply stroke-neutral-400;
+            @apply hover:stroke-neutral-100;
+        }
+    }
+
+    .bg-secondary {
+        @apply bg-gray-200;
+
+        @variant dark {
+            @apply bg-neutral-600;
+        }
+    }
+
+    .text-secondary {
+        @apply text-gray-600;
+
+        @variant dark {
+            @apply text-neutral-300;
+            @apply hover:text-neutral-100;
+        }
+    }
+
+    .btn-primary {
+        @apply bg-gray-100 inline-flex py-2 px-3 rounded-4xl text-black items-center cursor-pointer shadow-sm;
+        @apply hover:bg-white hover:shadow-md focus:outline-none;
+        @apply focus:bg-neutral-200;
+
+        @variant dark {
+            @apply bg-neutral-700 text-white;
+            @apply hover:bg-neutral-600;
+        }
+    }
+
+    .btn-secondary {
+        @apply bg-neutral-500 text-white text-sm py-2 px-3 rounded-4xl transition uppercase cursor-pointer font-medium shadow-md;
+        @apply hover:bg-neutral-600;
+        @apply focus:bg-neutral-800 focus:text-white;
+
+        @variant dark {
+            @apply bg-neutral-600 shadow-md text-neutral-200;
+            @apply hover:bg-white hover:text-neutral-600;
+        }
+    }
+
+    /***
+    SHOW-Action
+    ***/
+    #search_form {
+        @apply flex flex-1 justify-between items-center ml-3 xl:ml-8 border-b-1 border-neutral-300 py-1;
+        @variant dark {
+            @apply border-neutral-700;
+        }
+        /* @apply pl-10 bg-contain bg-no-repeat bg-[url(https://www.hisnulmuslim.de/fileadmin/HisnulMuslim/Icons/search.svg)]; */
+    }
+    #searchfield {
+        @apply w-full leading-tight focus:outline-none;
+    }
+    #search_btn {
+        @apply bg-gray-200 px-2 font-semibold;
+        @variant dark {
+            @apply bg-neutral-700;
+        }
+        /* @apply pl-10 bg-contain bg-no-repeat bg-[url(https://www.hisnulmuslim.de/fileadmin/HisnulMuslim/Icons/search.svg)]; */
+    }
+    /* #search_btssdn::before {
+        @apply inline absolute top-0 right-0 w-6 h-6 fill-black bg-contain bg-no-repeat bg-[url(https://www.hisnulmuslim.de/fileadmin/HisnulMuslim/Icons/search.svg)];
+        content: '';
+        @variant dark {
+            @apply fill-white;
+        }
+    } */
+
+    #transliteration-drawer {
+        thead tr th:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px;}
+        thead tr th:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px;}
+
+        tbody tr td:first-child { border-top-left-radius: 5px; border-bottom-left-radius: 0px;}
+        tbody tr td:last-child { border-top-right-radius: 5px; border-bottom-right-radius: 0px;}
+    }
+
+    /***
+    SHOW-Action
+    ***/
+    .favorisieren_btn {
+        @apply absolute right-2 top-5;
+
+        > svg {
+            @apply size-8;
+        }
+    }
+
+    #drawer {
+        transition: transform 0.4s ease-in-out;
+        transform: translateX(100%);
+    }
+
+    #drawer.open {
+        transform: translateX(0);
+    }
+}
